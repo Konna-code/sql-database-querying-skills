@@ -1,0 +1,46 @@
+Here is a SQL query example that uses the join syntax and the WHERE clause with an operator, followed by GROUP BY and ORDER BY to produce the desired output. 
+-The specific query output was to show the top 5 customers from top 10 cities who paid the highest amount. 
+
+- Firstly create a VIEW to show the top 10 cities. 
+##SQL Code 
+
+CREATE VIEW top_10_cities_view AS
+SELECT
+    D.country AS top_10_countries,
+    C.city AS top_10_cities,
+COUNT (A.customer_id) AS number_of_customers
+FROM customer A
+INNER JOIN address B ON A.address_id=B.address_id
+INNER JOIN city C ON B.city_id=C.city_id
+INNER JOIN country D ON C.country_id=D.country_id
+WHERE D.country IN (SELECT top_10_countries FROM top_10_countries_view)
+GROUP BY D.country, C.city
+ORDER BY COUNT(A.customer_id) DESC
+LIMIT 10
+
+- Next was to JOIN the payment table to the query and show the SUM of amount paid.
+##SQL Code
+
+SELECT
+    A.customer_id,
+    A.first_name AS top_5_customer_name,
+    A.last_name AS top_5_customer_last_name,
+    D.country AS top_10_countries,
+    C.city AS top_10_cities,
+SUM (E.amount) AS top_5_paying_customers
+FROM customer A
+FULL JOIN address B ON A.address_id=B.address_id
+FULL JOIN city C ON B.city_id=C.city_id
+FULL JOIN country D ON C.country_id=D.country_id
+FULL JOIN payment E ON A.customer_id=E.customer_id
+WHERE C.city IN (SELECT top_10_cities FROM top_10_cities_view)
+GROUP BY A.customer_id, D.country, C.city
+ORDER BY SUM(E.amount) DESC
+LIMIT 5
+
+
+
+
+
+
+
