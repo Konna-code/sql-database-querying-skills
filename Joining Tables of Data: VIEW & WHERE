@@ -1,4 +1,4 @@
-Here is a SQL query example to create a data outout from another query output by using the VIEW and WHERE syntax. 
+Here is a SQL query example to create a data output from another query output by using the VIEW and WHERE syntax. 
 This specific SQL query was designed to identify top 10 cities withing the top 10 countries.
 
 - Creating a VIEW of the top 10 countries:
