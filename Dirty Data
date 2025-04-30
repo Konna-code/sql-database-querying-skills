@@ -1,0 +1,44 @@
+# Duplicated Values
+##
+A simple SQL query example to retrieve duplicated film data from a PostgreSQL database.
+- Check: Identifying duplicated data by querying a syntax that only shows the
+records that are duplicated. If the data output returns no results, it means that there are no duplicated records.
+- Fix: If you find duplicate records in your database, there are two ways to fix them:
+● Option 1: Create a virtual table, known as a view, where you select only
+unique records.
+● Option 2: Delete the duplicate record from the table or view.
+
+## SQL Code
+
+```sql
+SELECT
+film_id,
+title,
+description,
+release_year,
+language_id,
+rental_duration,
+rental_rate,
+lenght,
+replacement_cost,
+rating,
+last_updated,
+special_feature,
+fulltext,
+COUNT(*)
+FROM film
+GROUP BY
+film_id,
+title,
+description,
+release_year,
+language_id,
+rental_duration,
+rental_rate,
+lenght,
+replacement_cost,
+rating,
+last_updated,
+special_features,
+fulltext
+HAVING COUNT(*)>1;
