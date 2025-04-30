@@ -1,0 +1,33 @@
+Here is a SQL query example to create a data outout from another query output by using the VIEW and WHERE syntax. 
+This specific SQL query was designed to identify top 10 cities withing the top 10 countries.
+
+- Creating a VIEW of the top 10 countries:
+## SQL Code
+
+CREATE VIEW top_10_countries_view AS
+SELECT
+    D.country AS top_10_countries,
+COUNT (A.customer_id) AS number_of_customers
+FROM customer A
+INNER JOIN address B ON A.address_id=B.address_id
+INNER JOIN city C ON B.City_id=C.city_id
+INNER JOIN country D ON C.country_id=D.country_id
+GROUP BY D.country
+ORDER BY COUNT(A.customer_id) DESC
+LIMIT 10
+
+- Now adding cities to the SELECT statement and using a WHERE clause to filter for the top 10 countries VIEW in the final output.
+## SQL Code
+
+SELECT
+    D.country AS top_10
+    C.city AS top_10_cities
+COUNT (A.customer_id) AS number_of_customers
+FROM customer A
+INNER JOIN address B ON A.address_id=B.address_id
+INNER JOIN city C ON B.City_id=C.city_id
+INNER JOIN country D ON C.country_id=D.country_id
+WHERE D.country IN (SELECT top_10_countries FROM top_10_countries_view)
+GROUP BY D-country, C.city
+ORDER BY COUNT(A.customer_id) DESC
+LIMIT 10
