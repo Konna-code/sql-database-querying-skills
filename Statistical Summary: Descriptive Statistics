@@ -1,0 +1,26 @@
+A SQL query example to retrieve statistical data fromm a PostgreSQL database. 
+
+SELECT
+    MIN(rental_duration)AS min_rental_duration,
+    MAX(rental_duration)AS max_rental_duration,
+    AVG(rental_duration)AS avg_rental_duration,
+    COUNT(rental_duration)AS count_rental_duration,
+    COUNT(*)AS count_rental_duration_rows,
+    MIN(retal_rate)AS min_rental_rate,
+    MAX(rental_rate)AS max_rental_rate,
+    AVG(rental_rate)AS avg_rental_rate,
+    COUNT(rental_rate)AS count_rental_rate,
+    COUNT(*)AS count_rental_rate,
+    MIN(lenght)AS min_lenght,
+    MAX(lenght)AS max_lenght,
+    AVG(lenght)AS avg_lenght,
+    COUNT(lenght)AS count_lenght,
+    COUNT(*)AS count_lenght_rows,
+    MIN(replacement_cost)AS min_replacement_cost,
+    MAX(replacement_cost)AS max_replacement_cost,
+    AVG(relacement_cost)AS avg_replacement_cost,
+    COUNT(replacement_cost)AS count_replacement_cost_rows,
+FROM
+    film
+
+    
