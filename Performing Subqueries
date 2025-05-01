@@ -4,7 +4,7 @@
 SELECT AVG (top_5_paying_customers) AS average_amount_paid_by_top_5_customers
 FROM(
 SELECT
-A.customer_id
+A.customer_id,
 A.first_name AS top_5_customer_name,
 A.last_name AS top_5_customer_last_name,
 D.country AS top_10_countries,
