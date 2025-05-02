@@ -98,4 +98,10 @@ By the end of the project, the company will gain actionable insights to:
 - Target high-value customer regions
 - Optimize content inventory based on performance
 
+---
+
 #The attached files showcase some of the more advanced SQL queries that were preformed to answer the key business questions. 
+
+---
+
+Visualizations were created using [Tableau Public](https://public.tableau.com/views/Book1_17424168531580/Top10movies?:language=en-GB&:sid=&:redirect=auth&:display_count=n&:origin=viz_share_link)
