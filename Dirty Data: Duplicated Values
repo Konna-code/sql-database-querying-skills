@@ -1,4 +1,4 @@
-A simple SQL query example to retrieve duplicated film-related data from a PostgreSQL database.
+ A simple SQL query example to check and retrieve duplicated film-related data from a PostgreSQL database.
 
 ## SQL Code
 
