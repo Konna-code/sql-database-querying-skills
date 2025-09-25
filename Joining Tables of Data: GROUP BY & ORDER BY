@@ -1,4 +1,4 @@
-Here is a SQL query to find the top 10 countries from a film-related PostgreSQL database using the GROUP BY and the ORDER BY syntax. 
+This is a SQL query to find the top 10 countries from a film-related PostgreSQL database using the GROUP BY and the ORDER BY syntax.
 
 SELECT
 D.country AS top_10_countries,
