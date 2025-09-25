@@ -1,6 +1,6 @@
 Below an example of a Common Table Expression (CTE) using the WITH syntax in a PostgreSQL database.
 
-- This specific query returns the average amount paid by the top 5 customers in a film-related data-set. 
+- This specific query returns the average amount paid by the top 5 customers in a film-related data-set.
 
 ##SQL Code
 
