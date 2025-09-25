@@ -1,4 +1,5 @@
 - This specific query returns the output of the average amount paid by the top 5 customers using a subquery (total_amount_paid) and a VIEW (top_10_cities) from a previous query.
+
 ##SQL Code
 
 SELECT AVG (top_5_paying_customers) AS average_amount_paid_by_top_5_customers
