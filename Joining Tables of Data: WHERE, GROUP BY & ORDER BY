@@ -1,5 +1,5 @@
 Here is a SQL query example that uses the join syntax and the WHERE clause with an operator, followed by GROUP BY and ORDER BY to produce the desired output. 
--The specific query output was to show the top 5 customers from top 10 cities who paid the highest amount. 
+-The specific query output was to show the top 5 customers from top 10 cities who paid the highest amount.
 
 - Firstly create a VIEW to show the top 10 cities. 
 ##SQL Code 
