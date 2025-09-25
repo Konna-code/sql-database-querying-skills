@@ -1,5 +1,4 @@
 # 🎬  Data Analysis Project: Databases & SQL
-
 ## 📘 Project Overview
 
 The project revolves around a former global movie rental company that operated through physical stores. With the rise of streaming services, the company is planning to pivot by launching an **online video rental platform** leveraging its existing movie licenses.
